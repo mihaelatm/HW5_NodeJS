@@ -1,7 +1,7 @@
 import http from "http";
 
 const server = http.createServer((req, res) => {
-  res.setHeader("Content-Type", "text/plain; charset=UTF-8"); // Указываем кодировку явно
+  res.setHeader("Content-Type", "text/plain; charset=UTF-8");
 
   if (req.method === "PUT") {
     res.statusCode = 200;
@@ -11,7 +11,7 @@ const server = http.createServer((req, res) => {
     res.end("DELETE-запрос обработан");
   } else {
     res.statusCode = 405;
-    res.end("Метод не поддерживается"); // Текст будет отправлен в кодировке UTF-8
+    res.end("Метод не поддерживается");
   }
 });
 
